@@ -1,5 +1,0 @@
-blacksheep
-uvicorn[standard]
-uvloop
-piccolo[postgres]
-pyjwt
