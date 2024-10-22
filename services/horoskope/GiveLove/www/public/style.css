@@ -1,0 +1,730 @@
+body {
+    margin: 0%;
+    background-color: rgb(62, 61, 59);
+    font-family: cursive;
+}
+
+header {
+    width: 100%;
+    height: 130px;
+    background: #222222;
+    text-align: center;
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    width: 100%;
+    height: 120px;
+    background: #222222;
+    text-align: center;
+    color: aliceblue;
+    position: absolute;
+    z-index: 99;
+}
+
+footer img {
+    border-radius: 25%;
+}
+
+footer span {
+    float: left;
+    padding: 2% 10%;
+}
+
+footer a {
+    color: snow;
+    padding: 20px 20px;
+    float: right;
+    margin: 2% 10%;
+    transition: all.2s ease;
+}
+
+footer a:hover {
+    background-color: rgb(45, 45, 45);
+    transition: all.2s ease;
+    font-size: 18px;
+}
+
+header img {
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+}
+
+#name {
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    display: inline;
+}
+
+#icon {
+    float: left;
+    padding: 1% 1%;
+}
+
+#exit {
+    display: inline;
+    float: right;
+    size: 48px;
+    padding: 2% 2%;
+    border-radius: 5%;
+    position: absolute;
+    right: 15px;
+}
+
+.main {
+    font-family: cursive;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2% 5%;
+    padding-bottom: 7.4%;
+    border-radius: 22px;
+    border-style: initial;
+    max-width: 305px;
+}
+
+.mainreg {
+    font-family: cursive;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2% 5%;
+    padding-bottom: 7.4%;
+    border-radius: 22px;
+    border-style: initial;
+    max-width: 607px;
+}
+
+#exit {
+    display: inline;
+    float: right;
+    size: 48px;
+    padding: 2% 2%;
+    border-radius: 5%;
+}
+
+input[type=submit] {
+    border-radius: 20px;
+    background-color: rgb(62, 61, 59);
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all.6s ease;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(58, 52, 52);
+    transition: all.6s ease;
+}
+
+.map {
+    padding-top: 1%;
+}
+
+.map a {
+    transition: all.2s ease;
+    color: aliceblue;
+    padding: 2px 5px;
+}
+
+.map a:hover {
+    transition: all.2s ease;
+    padding: 12px 15px;
+    background-color: rgb(45, 45, 45);
+    font-size: 18px;
+}
+
+span {
+    size: 18px;
+}
+
+.info {
+    display: inline-block;
+    text-align: right;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 5%;
+    color: aliceblue;
+}
+
+#sidebar {
+    background-color: #222222;
+    size: 24px;
+    display: inline-block;
+    height: 100%;
+    position: fixed;
+    width: 200px;
+    transition: all.3s ease;
+    overflow-x: auto;
+    padding-top: 100px;
+}
+
+#sidebar ul {
+    font-size: 24px;
+    padding-left: 10px;
+    list-style-type: none;
+    padding: 30px;
+    transition: all.2s ease;
+}
+
+#sidebar a {
+    color: snow;
+}
+
+#sidebar li {
+    padding: 5px 5px;
+    transition: all.2s ease;
+}
+
+#sidebar li:hover {
+    background-color: rgb(45, 45, 45);
+    padding-left: 15px;
+    transition: all.2s ease;
+}
+
+#sidebarButton {
+    margin: 1% 2%;
+    position: fixed;
+    margin-left: 155px;
+    transition: all.3s ease;
+}
+
+.headerHoro {
+    width: 100%;
+    height: 130px;
+    background: #222222;
+    text-align: center;
+    z-index: 99;
+    position: fixed;
+}
+
+.news {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: left;
+    width: 600px;
+}
+
+.news span {
+    font-size: 20px;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.mainhoro {
+    color: aliceblue;
+    text-align: left;
+    padding: 0px;
+    padding-top: 130px;
+}
+
+.imgzz {
+    border: 2px;
+    border-radius: 30px;
+    border-color: #c08827;
+    border-style: solid;
+    width: 55px;
+    height: 55px;
+    transition: all.2s ease;
+}
+
+.imgzz:hover {
+    border-radius: 35px;
+    border-color: #fa807200;
+    width: 65px;
+    height: 65px;
+    transition: all.2s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+.photoProfile img {
+    border-radius: 100%;
+    margin: 10px 10px;
+    transition: all.3s ease;
+}
+
+.photoProfile img:hover {
+    cursor: pointer;
+    transition: all.3s ease;
+}
+
+.photoProfile select {
+    border: 3px;
+    border-color: #222;
+    border-style: solid;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.info input {
+    border: 3px;
+    border-color: #222;
+    border-style: solid;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.info span {
+    font-size: 24px;
+}
+
+.info select {
+    border: 3px;
+    border-color: #222;
+    border-style: solid;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.info select:focus-visible {
+    outline: none;
+}
+
+.info button {
+    font-family: cursive;
+    border-radius: 20px;
+    background-color: #222;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all.6s ease;
+    padding: 15px 30px;
+    margin: 8px 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all.3s ease;
+}
+
+.info button:hover {
+    background-color: #525151;
+}
+
+.buttonProfile button {
+    font-family: cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #222;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all.6s ease;
+    padding: 15px 30px;
+    margin: 8px 10px;
+    cursor: pointer;
+    transition: all.3s ease;
+}
+
+.buttonProfile form {
+    display: inline-block;
+}
+
+.buttonProfile input[type=submit] {
+    font-family: cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #222;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all.6s ease;
+    padding: 15px 30px;
+    margin: 8px 10px;
+    cursor: pointer;
+    transition: all.3s ease;
+}
+
+#deleteButton:hover {
+    background-color: #733737;
+}
+
+#cancelButton:hover {
+    background-color: #733737;
+}
+
+#saveButton:hover {
+    background-color: #4e7337;
+}
+
+.authorization input,
+.form2 input {
+    border: 3px;
+    border-color: #222;
+    border-style: solid;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.authorization input[type=submit],
+.form2 input[type=submit] {
+    display: block;
+    margin: 12px auto;
+    font-family: cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #3e3d3b;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all.6s ease;
+    padding: 12px 50px;
+    cursor: pointer;
+    transition: all.3s ease;
+}
+
+.authorization input[type=submit]:hover,
+.form2 input[type=submit]:hover {
+    background-color: #878480;
+}
+
+.autch {
+    margin-left: 0px;
+}
+
+.regA a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all.3s ease;
+}
+
+.regA a:hover {
+    background-color: #3e3d3b;
+}
+
+.formReg {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.filter {
+    text-align: center;
+    width: 80%;
+    height: 200px;
+    background: #222222;
+}
+
+.headerUsers {
+    height: 180px;
+}
+
+.headerUsers select {
+    font-family: cursive;
+    float: left;
+    font-size: 16px;
+    margin: 25px;
+    margin-left: 50px;
+    color: aliceblue;
+    background: #3e3d3b;
+}
+
+.headerUsers select:focus-visible {
+    outline: none;
+}
+
+.find {
+    float: right;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.find input[type="submit"] {
+    padding: 8px 20px;
+}
+
+.find input[type="text"] {
+    font-size: 16px;
+    font-family: cursive;
+    background-color: #3e3d3b;
+    border: none;
+    color: aliceblue;
+    vertical-align: middle;
+}
+
+.Users {
+    padding: 44px 62px;
+    border-radius: 10%;
+    background: #222222;
+    width: max-content;
+    height: max-content;
+    margin: 10px;
+    display: inline-block;
+    max-width: 458px;
+    transition: all.3s ease;
+}
+
+.Users:hover {
+    padding: 48px 66px;
+    cursor: pointer;
+    margin: 6px;
+    transition: all.3s ease;
+}
+
+.Users_id {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 12px;
+    color: #8e9295;
+    visibility: collapse;
+}
+
+.Users_info img {
+    border-radius: 100%;
+    vertical-align: text-top;
+}
+
+.Users_info div {
+    margin-bottom: 10px;
+}
+
+.Users_data {
+    margin-left: 15px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.id1 {
+    color: #733737;
+}
+
+.id2 {
+    color: #736437;
+}
+
+.id3 {
+    color: #4e7337;
+}
+
+
+/* Стили для подложки */
+
+.overlay {
+    /* Скрываем подложку  */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    box-shadow: 0 3px 10px -.5px rgba(155, 139, 139, 0.2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: #222;
+    transition: 0.3s all;
+}
+
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Users.invise {
+    visibility: hidden;
+    position: fixed;
+}
+
+.divmessage {
+    padding: 0px 0px;
+    visibility: visible;
+    width: 100%;
+    background: #222222;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all.3s ease;
+}
+
+.message {
+    color: #793e44;
+    opacity: 0;
+    transition: all.6s ease;
+}
+
+.divmessageOpen {
+    padding-top: 12px;
+}
+
+.messageOpen {
+    color: #793e44;
+    opacity: 1;
+}
+
+.refused {
+    background: #222;
+    width: 300px;
+    margin: 80px auto;
+    padding: 80px 80px;
+    border-radius: 20%;
+}
+
+.infodiv img {
+    border-radius: 25%;
+    margin: 5px;
+}
+
+.infodiv span {
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+}
+
+.block {
+    padding: 10px;
+    background: #222;
+    border-radius: 10%;
+}
+
+.userMessage1 {
+    width: 60%;
+    height: max-content;
+    text-align: left;
+    margin: 18px auto;
+}
+
+.userMessage2 {
+    width: 60%;
+    height: max-content;
+    text-align: right;
+    margin: 18px auto;
+}
+
+.userMessageAvatar {
+    border-radius: 100%;
+    border: 4px;
+    border-color: #222222;
+}
+
+.messages1 {
+    right: 1;
+    max-width: 85%;
+    border: none;
+    border-radius: 20px;
+    margin: 5px 10px;
+    padding: 20px;
+    background-color: #222222;
+    right: 15px;
+    font-size: 22px;
+}
+
+.messages2 {
+    margin-left: 15%;
+    max-width: 85%;
+    text-align: left;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: auto;
+    padding: 20px;
+    background-color: #222222;
+    right: 15px;
+    font-size: 22px;
+}
+
+.allMessage {
+    /* height: 80%; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 500px;
+}
+
+.textMessage {
+    word-wrap: break-word;
+}
+
+.userMessageName {
+    font-size: 18px;
+}
+
+.timeMessage {
+    font-size: 12px;
+    color: #444;
+    text-align: right;
+    display: block;
+}
+
+.messages {
+    min-height: calc(100vh - 100px);
+    padding-top: 0%;
+}
+.newMessage input[type="text"]{
+    width: 450px;
+    padding: 10px;
+    border-radius: 15px;
+    min-height: 40px;
+    max-height: max-content;
+}
+.hrefuser{
+    text-decoration: none;
+    color: aliceblue;
+}
+.setting{
+    transition: all.2s ease;
+    position: relative;
+    left: 55%;
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+}
+.setting:hover{
+    transition: all.2s ease;
+    border-radius: 10px;
+    mix-blend-mode: screen;
+}

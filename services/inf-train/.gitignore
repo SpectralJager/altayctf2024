@@ -1,0 +1,19 @@
+/create_bundle.cmd
+/refs/
+*.zip
+*.bundle
+*.log
+#*.db
+*.http
+
+!.gitkeep
+
+/site/www/includes/vendor/*
+!/site/www/includes/vendor/.gitkeep
+
+/site/www/images/*
+!/site/www/images/.gitkeep
+
+#git update-index --assume-unchanged www/credentials.php
+#git update-index --no-assume-unchanged www/credentials.php
+#git config --add merge.ff false

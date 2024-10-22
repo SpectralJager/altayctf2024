@@ -1,0 +1,21 @@
+version: '2.4'
+
+
+services:
+  infinity_train_site:
+    container_name: inf-train
+    build: ./
+    mem_limit: 1024M
+    cpus: 1
+    ports:
+      - 8888:80
+    volumes: 
+      - ./site:/var/www/html:rw
+    restart: unless-stopped
+    networks:
+      - infinity_net
+
+
+networks:
+  infinity_net:
+    driver: bridge

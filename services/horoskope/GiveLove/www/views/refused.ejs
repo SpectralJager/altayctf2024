@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <header id="header" class="headerUsers">
+        <div>
+            <img id="icon" style="vertical-align: middle;" src="/assets/dragon_icon.jpg" width="100" height="100">
+            <a id="name">GiveLove</a>
+            <form id="exit" action='/exit' method="post">
+                <input type="submit" value="Выход">
+            </form>
+        </div>
+        <div class="map">
+            <a href="/users">Список пользователей</a>
+            <a href="/horoscope">Гороскоп</a>
+            <a href="/profile">Личный профиль</a>
+        </div>
+        <div>
+            <form name="myform">
+                <select name="selectedUsers">
+                    <option>Все аккаунты</option>
+                    <option>Пользователи</option>
+                    <option>Модераторы</option>
+                    <option>Администраторы</option>
+                </select>
+            </form>
+        </div>
+        <form name="find" class="find">
+            <input name="textFind" type="text">
+            <input name="submitFind" type="submit" value="Поиск">
+        </form>
+    </header>
+    <main>
+        <div class="refused">
+            <Span>
+                Что бы получить доступ к данной вкладке необходимо обладать правами модератора или администратора
+            </Span>
+        </div>
+
+    </main>
+</body>
+<%- include('blocks/footer') -%>
+    <script src="/assets/users.js"></script>
+
+</html>

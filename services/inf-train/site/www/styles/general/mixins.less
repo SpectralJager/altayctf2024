@@ -1,0 +1,135 @@
+// Размер шрифта и line-height
+.f(@fs, @lh) {
+	font-size: @fs;
+	line-height: @lh;
+}
+// Быстрый квадрат
+.sq(@size) {
+	height: @size*1px;
+	width: @size*1px;
+}
+// Цвет placeholder
+.ph(@color){
+	&::-webkit-input-placeholder {
+		color: @color
+	}
+	&:-moz-placeholder {
+		color: @color
+	}
+	&::-moz-placeholder {
+		color: @color
+	}
+	&:-ms-input-placeholder {
+		color: @color
+	}
+}
+.select-color(@color){
+	&::selection {
+		background: @color;
+	}
+	&::-moz-selection {
+		background: @color;
+	}
+}
+
+.disable-select(){
+	-ms-user-select:none;
+	-moz-user-select:none;
+	user-select:none;
+	-webkit-user-select:none;
+}
+
+.pixelated(){
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: pixelated;
+	image-rendering: optimize-contrast;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+// Подключение шрифтов
+.font(@family, @filename: @family, @weight: normal, @style: normal) {
+	@font-face {
+		font-family: @family;
+		src:url('/assets/fonts/@{filename}.eot');
+		src:url('/assets/fonts/@{filename}.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/@{filename}.woff') format('woff'),
+		url('/assets/fonts/@{filename}.ttf') format('truetype');
+		font-weight: @weight;
+		font-style: @style;
+	}
+}
+
+.absolute-center(){
+	position:absolute;
+	top:50%;
+	left:50%;
+	.transform(~"translate(-50%, -50%)");
+}
+
+// Transition
+.trs(@for: all, @time: 0.3, @type: ease-in) {
+	-webkit-transition: @for @type @time;
+	-moz-transition: @for @type @time;
+	-o-transition: @for @type @time;
+	transition: @for @type @time;
+}
+.transform-origin(@x, @y){
+	-webkit-transform-origin: @x @y;
+	-moz-transform-origin: @x @y;
+	-o-transform-origin: @x @y;
+	-ms-transform-origin: @x @y;
+	transform-origin: @x @y;
+}
+.transform(@tans){
+	-moz-transform: @tans; // Для Firefox
+	-ms-transform: @tans; // Для IE
+	-webkit-transform: @tans; // Для Safari, Chrome, iOS
+	-o-transform: @tans; // Для Opera
+	transform:@tans;
+}
+.text-background(@background){
+	background: @background;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+//боковые отступы
+.padding-lr(@padding){
+	padding-left:@padding;
+	padding-right:@padding;
+}
+.margin-lr(@margin){
+	margin-left:@margin;
+	margin-right:@margin;
+}
+.padding-tp(@padding){
+	padding-top:@padding;
+	padding-bottom:@padding;
+}
+.margin-tp(@margin){
+	margin-top:@margin;
+	margin-bottom:@margin;
+}
+
+.image-enter-into{
+	object-fit: contain;
+
+	max-width:100%;
+	max-height:100%;
+}
+
+.text-select-color(@color){
+	*::selection {
+		background: @color;
+	}
+	*::-moz-selection {
+		background: @color;
+	}
+	*::-webkit-selection {
+		background: @color;
+	}
+}
+
+@mediaSensor: ~"@media (pointer:none), (pointer:coarse)";

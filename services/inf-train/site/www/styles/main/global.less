@@ -1,0 +1,118 @@
+:root{
+	--side-gap:150px;
+	
+	@media screen and (min-width: 2400px){
+		--side-gap:15vw;
+	}
+
+	@media @xxl{
+		--side-gap:100px;
+	}
+	@media @xl{
+		--side-gap:75px;
+	}
+	@media @lg{
+		--side-gap:50px;
+	}
+	@media @lessLG{
+		--side-gap:20px;
+	}
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	//font-size:inherit;
+	//line-height:inherit;
+}
+
+
+body{
+	position:relative;
+	cursor:default;
+	min-height: 100vh;
+	height: 1px;
+	min-width:315px;
+
+	scrollbar-gutter:stable both-edges;
+
+	font-family: "Arial", serif;
+	font-style: normal;
+	color:@cText;
+	font-weight: 400;
+	.f(@fs20, @lh20);
+	
+	//display:flex;
+	//flex-direction:column;
+	//justify-content:flex-start;
+	//align-items:center;
+	//row-gap: 20px;
+}
+
+
+footer{
+	position:relative;
+	margin: auto calc(var(--side-gap) + 74px) 30px;
+	min-width:268px;
+}
+
+.page-section{
+	position:relative;
+	width:100%;
+	padding:0 var(--side-gap);
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+img{
+	display:block;
+	position:relative;
+	color:transparent;
+
+	&:after {
+		text-align:center;
+		content: "Не удалось загрузить изображение. Описание: " attr(alt);
+
+		color:#999;
+
+		.absolute-center();
+		width:100%;
+		padding:10px;
+	}
+}
+
+.billet-img{
+	max-width: 100%;
+	height: auto;
+	width: 100%;
+
+	//content-visibility: auto;
+	background-size: cover;
+	background-position: center;
+}
+
+table{
+	width:100%;
+	text-align:left;
+	border-collapse: collapse;
+	
+	td{
+		padding: 12px 20px;
+	}
+	
+	th{
+		padding: 0 20px 12px;
+	}
+	
+	tr{
+		border-bottom: 1px solid @cBlack;
+	}
+}
+
+.clear{
+	clear:both;
+}

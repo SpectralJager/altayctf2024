@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Профиль</title>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+</head>
+
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+        
+
+    <%- include('blocks/header') -%>
+        <main class="messages">
+            <div class="allMessage">
+                <%if(users[2]){%>
+                <%users[2].forEach(message => {%>
+                    <%if (message.value.user.login == users[1].login){%>
+                    <div class="userMessage1">
+                        <img class="userMessageAvatar" src="/assets/avatars/<%= users[1].avatar%>" alt="" width="35px" height="35px">
+                        <span class="userMessageName"><%= users[1].name%>  <%= users[1].surname%></span>
+                        <div class="messages1">
+                            <span class="textMessage"><%= message.value.message%></span>
+                            <span class="timeMessage"><%= message.value.time%></span>
+                        </div>
+
+                    </div>
+                    <%}else if (message.value.user.login == users[0].login){%>
+                    <div class="userMessage2">
+                        <img class="userMessageAvatar" src="/assets/avatars/<%= users[0].avatar%>" alt="" width="35px" height="35px">
+                        <span class="userMessageName"><%= users[0].name%>  <%= users[0].surname%></span>
+                        <div class="messages2">
+                            <span class="textMessage"><%= message.value.message%></span>
+                            <span class="timeMessage"><%= message.value.time%></span>
+                        </div>
+
+                    </div>
+                    <%};%>
+                <%});%>
+                <%}else{%>
+                    <div class="userMessage1">
+                        <span class="userMessageName"></span>
+                        <div class="messages1">
+                            <span class="textMessage">Сдесь ещё нет сообщений, вы можете стать первым!</span>
+                            <span class="timeMessage"></span>
+                        </div>
+
+                    </div>
+                <%};%>
+                <%if(Array.isArray(users[3])){%>
+                    <div class="userMessage1">
+                        <span class="userMessageName"></span>
+                        <div class="messages1">
+                            <span class="textMessage">Сдесь ещё нет сообщений, вы можете стать первым!</span>
+                            <span class="timeMessage"></span>
+                        </div>
+
+                    </div>
+                <%};%>
+            </div>
+            <form class="newMessage" action="/message/<%= users[1]._id%>" method="post">
+                <input type="text" name="text" title="text"><br>
+                <input type="submit" title="Отправить">
+            </form>
+        </main>
+        <script>
+            var containers = document.getElementsByClassName('allMessage');
+            var container = containers[0];
+            window.onload = function() {
+                container.scrollTop = container.scrollHeight;
+            };
+            const socket = io();
+
+            socket.on('connect', () => {
+                console.log('Connected to server');
+            });
+
+            socket.on('disconnect', () => {
+                console.log('Disconnected from server');
+            });
+
+            socket.on('newMessage', (message) => {
+        // Обновляем содержимое страницы, добавляя новое сообщение
+        const messageContainer = document.querySelector('.allMessage');
+        const newMessageElement = document.createElement('div');
+        newMessageElement.classList.add('userMessage1'); // или 'userMessage2' в зависимости от отправителя сообщения
+        newMessageElement.innerHTML = `
+            <img class="userMessageAvatar" src="/assets/avatars/${message.user.avatar}" alt="" width="35px" height="35px">
+            <span class="userMessageName">${message.user.name} ${message.user.surname}</span>
+            <div class="messages1">
+                <span class="textMessage">${message.message}</span>
+                <span class="timeMessage">${message.time}</span>
+            </div>
+        `;
+        messageContainer.appendChild(newMessageElement);
+        container.scrollTop = container.scrollHeight;
+    });
+        </script>
+        <%- include('blocks/footer') -%>
+</body>
+
+</html>

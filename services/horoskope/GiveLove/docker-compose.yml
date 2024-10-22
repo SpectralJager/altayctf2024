@@ -1,0 +1,37 @@
+version: '2.4'
+
+services:
+ db:
+  container_name: givelove_db 
+  image: couchdb:latest
+  volumes:
+   - ./DataBase:/opt/couchdb/data:rw
+  mem_limit: 512M
+  cpus: 1
+  restart: always
+  environment:
+   - COUCHDB_USER=admin
+   - COUCHDB_PASSWORD=admin
+  networks:
+    - givelove_net
+
+
+ node:
+  container_name: givelove_web  
+  build: ./www
+  ports:
+   - "3000:3000"
+  restart: always
+  mem_limit: 1024M
+  cpus: 1
+#  volumes:
+ #  - ./www:/www
+  depends_on:
+   - db
+  networks:
+   - givelove_net
+    
+networks:
+  givelove_net:
+    driver: bridge
+

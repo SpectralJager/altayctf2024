@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/reg.js" defer></script>
+</head>
+
+<body>
+    <%- include('blocks/headernologin') -%>
+        <main class="mainreg">
+            <h1 class="autch">Регистрация</h1>
+            <form class="authorization" action="/reg_check" method="post">
+                <div class="formReg">
+                    Имя:<br>
+                    <input type="text" name="name" class="name"><br> Фамилия:
+                    <br>
+                    <input type="text" name="surname" class="surname"><br> Отчество:
+                    <br>
+                    <input type="text" name="fathername" class="fathername"><br> Дата рождения:<br>
+                    <input type="date" name="date" class="date"><br>
+                </div>
+                <div class="formReg">
+                    Логин:<br>
+                    <input type="login" name="login" class="login"><br> Пароль:
+                    <br>
+                    <input type="password" name="password" class="password"><br> Повторите пароль:<br>
+                    <input type="password" name="passwordrepeat" class="passwordrepeat"><br> Пол:
+                    <br>
+                    <input type="radio" name="man" class="man" value="Мужской">
+                    <label for="man">Мужской</label><br>
+                    <input type="radio" name="women" class="women" value="Женский">
+                    <label for="women">Женский</label>
+                </div>
+                <div class="divmessage">
+                    <span class="message"></span>
+                </div>
+                <input type="submit" value="Зарегистрировать">
+            </form>
+            <div class="regA">
+                <a href="/">Вход</a>
+            </div>
+        </main>
+</body>
+<%- include('blocks/footer') -%>
+
+</html>

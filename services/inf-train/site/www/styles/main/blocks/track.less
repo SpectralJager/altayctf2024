@@ -1,0 +1,40 @@
+.track{
+	
+	@w_track:32px;
+	@h_track:54px;
+	
+	position:relative;
+	padding:0 100px 13px * @coef 100px;
+	min-width:100%;
+	min-height:@h_track * @coef;
+	
+	display:inline-flex;
+	justify-content:center;
+	align-items: end;
+
+	background: url(@imgTrack) ~"left bottom / " @w_track*@coef @h_track*@coef repeat-x;
+
+	
+	animation: trackAnimation 0.6s steps(unit(@w_track/2)) infinite;
+
+	@keyframes trackAnimation {
+		0% {
+			background-position: left 0 bottom;
+		}
+		100% {
+			background-position: left (-@w_track*@coef) bottom;
+		}
+	}
+
+	.wagon, .locomotive{
+		cursor:help;
+		
+		&.active,&:hover{
+			@cOutline: #ffd633;
+			filter: drop-shadow( 5px  0px 0px @cOutline)
+				drop-shadow(-5px  0px 0px @cOutline)
+				drop-shadow( 0px  5px 0px @cOutline)
+				drop-shadow( 0px -5px 0px @cOutline);
+		}
+	}
+}

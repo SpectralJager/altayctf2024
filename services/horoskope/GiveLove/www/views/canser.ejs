@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Гороскоп</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <%- include('blocks/headerhoro') -%>
+        <%- include('blocks/section') -%>
+
+            <main class="mainhoro">
+                <button id="sidebarButton" onclick="moveSideBarClose()"><img src="/assets/sidebarButton.jpg" width="20px" height="20px"></button>
+                <% rows.forEach((row)=>{%>
+                    <article class="news">
+                        <h1>
+                            <%=row.value.date%>
+                        </h1>
+                        <div>
+                            <img class="imgzz" style="vertical-align: middle;" src="/assets/canser.jpg">
+                            <h1>Рак - повседневный</h1><br>
+                            <span>
+                        <%= row.value.Daily%>
+                    </span>
+                        </div>
+                    </article>
+                    <article class="news">
+                        <div>
+                            <img class="imgzz" style="vertical-align: middle;" src="/assets/canser.jpg">
+                            <h1>Рак - любовный</h1><br>
+                            <span>
+                        <%= row.value.Love%>
+                    </span>
+                        </div>
+                    </article>
+                    <article class="news">
+                        <div>
+                            <img class="imgzz" style="vertical-align: middle;" src="/assets/canser.jpg">
+                            <h1>Рак - бизнес</h1><br>
+                            <span>
+                        <%= row.value.Health%>
+                    </span>
+                        </div>
+                    </article>
+                    <%});%>
+            </main>
+            <script src="/assets/moveSideBar.js"></script>
+</body>
+<%- include('blocks/footer') -%>
+
+</html>

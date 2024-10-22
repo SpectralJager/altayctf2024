@@ -1,0 +1,14 @@
+ErrorDocument 403 /api/index.php
+
+RewriteEngine On
+
+
+#удаляем повторяющиеся слэши
+RewriteCond %{THE_REQUEST} \s[^?]*//
+RewriteRule ^.*$ /api/$0 [R=301,L]
+
+
+#перенаправление запросов на index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /api/index.php [QSA,L]

@@ -1,0 +1,81 @@
+body.main{
+	
+	@coef: 3;
+
+	max-width:100%;
+	background-color:#6d93d6;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:end;
+	
+
+	.pixelated();
+
+	.path{
+		width:100%;
+
+		position:absolute;
+		bottom:calc(54% - 30px);
+		
+		overflow-x:auto;
+		overflow-x:overlay;
+		
+		padding-bottom:30px;
+	}
+	
+	.horizon{
+		@h_tree:32px;
+		@w_tree:32px;
+		
+		@h_horizon:70px;
+		@w_horizon:20px;
+		
+		position:relative;
+
+		width:100%;
+		height: @h_tree*@coef;
+		padding-top: @h_horizon*@coef;
+		box-sizing:content-box;
+
+		background: url(@imgTrees) ~"left bottom / " @w_tree*@coef @h_tree*@coef repeat-x;
+		flex-shrink:0;
+		
+		margin-bottom:-0.5px;
+
+		//animation: treeAnimation 4s linear infinite;
+		animation: treeAnimation 4s steps(unit(@w_tree*@coef)) infinite;
+
+		@keyframes treeAnimation {
+			0% {
+				background-position: left 0 bottom;
+			}
+			100% {
+				background-position: left (-@w_tree*@coef) bottom;
+			}
+		}
+		
+		&:before{
+			content:"";
+			position:absolute;
+			
+			width:100%;
+			height:(@h_horizon)*@coef;
+			top:1px;
+			
+			background: url(@imgHorizon) ~"left top / " @w_horizon*@coef @h_horizon*@coef repeat-x;
+		}
+	}
+
+	.land{
+		width:100%;
+		height:35%;
+		
+		position:relative;
+
+		//background: url('/assets/grass_tile.png') left top / 32px*@coef repeat;
+		background-color: #7bd434;
+
+		flex-shrink:0;
+	}
+}

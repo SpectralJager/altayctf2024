@@ -1,0 +1,93 @@
+//цвета
+@cBlack:	#1A1A1A;
+@cShadow:	rgba(0,0,0,0.5);
+@cDarkGray:	#6A6A6A;
+@cGray:		#AAAAAA;
+@cLightGray:#CECECE;
+@cNearlyWhite: #F0F0F0;
+@cWhite:	#FFFFFF;
+@cText:		#393939;
+@cRed:		#8b2019;
+@cLink:		#ffcc00;
+
+@coef: 3;
+
+@imgCloud: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAYAgMAAADIeDY1AAAADFBMVEUAAADk9v/X3/yxyv/ppJniAAAAAXRSTlMAQObYZgAAAMlJREFUGNNVzTEOgkAQBdCJdDSewsLOxANwitkIFQ0UnoJLUNjRLIGx4AAUktiSeA8LGztDXP8yROPfzCSv2PmEhBWRNLTEJkXIplCEzOkGo9oyH0qMqmU2jPmKfxLWFB4rKf9UZ7NSlZxmJQqpPWKu0F3m+jFDI7pjPRr7jg0brxwPssxecYldQIn/Zwy2qmUssTja8vEh1oi8JWnoLmf3QmeH7SiSi3Ou77G6iSKH3DBX5wYKvCjCjCMRrZ/RRME00J58xmBHSz7oRnkhlt4i0gAAAABJRU5ErkJggg==";
+@imgDoorLock: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmlld0JveD0iLTkgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KCTxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMS40IDI1LjJoLTkuMjRjLTAuNzYgMC0xLjQ4LTAuNC0xLjg0LTEuMDgwLTAuNC0wLjY4LTAuNC0xLjQ4IDAtMi4xNmwyLjkyLTUuNTZjLTEuMi0xLjA0MC0xLjkyLTIuNTYtMS45Mi00LjE2IDAtMyAyLjQ0LTUuNDQgNS40OC01LjQ0czUuNDggMi40NCA1LjQ4IDUuNDhjMCAxLjY0LTAuNzIgMy4xMi0xLjkyIDQuMTZsMi45NiA1LjZjMC4zNiAwLjY4IDAuMzYgMS40OCAwIDIuMTItMC40NCAwLjY0LTEuMTIgMS4wNDAtMS45MiAxLjA0MHpNNi44IDguNDRjLTIuMTIgMC0zLjggMS43Mi0zLjggMy44IDAgMS4zMiAwLjY4IDIuNTIgMS43NiAzLjI0IDAuMzYgMC4yNCAwLjQ4IDAuNzIgMC4yOCAxLjA4MGwtMy4yOCA2LjI0Yy0wLjE2IDAuMjQtMC4wNDAgMC40NCAwIDAuNTJzMC4xNiAwLjI0IDAuNDQgMC4yNGg5LjI4YzAuMjQgMCAwLjQtMC4xNiAwLjQ0LTAuMjRzMC4xMi0wLjI4IDAtMC40OGMwIDAgMCAwIDAtMC4wNDBsLTMuMjgtNi4yNGMtMC4yLTAuNC0wLjA4MC0wLjg0IDAuMjgtMS4wODAgMS4xMi0wLjcyIDEuNzYtMS45MiAxLjc2LTMuMjQtMC4wODAtMi4wODAtMS44LTMuOC0zLjg4LTMuOHoiLz4NCjwvc3ZnPg==";
+@imgHorizon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAABGAgMAAACxoVxiAAAADFBMVEV6mdZ0l9aGotZtk9b/OlyvAAAARUlEQVQY06XGMRGAMBTA0FhgwAAjKhiwgBZGGKulfjpWS3tx8O/3DbkwlOwnungV+iYeJbuLW2wK/SVW/OIQRaE/RVWuE7iBnbgjsbAHAAAAAElFTkSuQmCC";
+@imgSun: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAD1BMVEX/zAAAAAD/zAD/zAD/zADO0tuzAAAABHRSTlNcAI0mbmi1ewAAAMtJREFUOMvUztENAyEMA1ALJqhYAKEOcFU2qNh/pspnEv90gfMfenIMXpVg/CyJTIkBjAkJF5ROsgxC0cdiMEkOmFKGxttaa4K5S6jKUqqErKyMSpLrgKlLQhuVyRJlxKm8995flXgO97EmIKnUKfyZoIi/o+jYzlA4BM40Vao0OYQzsx0NUXzM5yw85nOSwF9BUGrGQ4+WXx11QAAAAMIgrH/rJVgEPZBL+51/9Ct8ua99Qk7VSTy9J/6W3KzbeINv/UvxurxIr9jLByk6mBN5WtPlAAAAAElFTkSuQmCC";
+@imgTrack: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAA2BAMAAABU24ZBAAAAKlBMVEUAAACj2mJmSixCPDyIa0xgVlzA6+iagGRJNR9JiVImICCznYbLuqh7YUTaNVbeAAAAAXRSTlMAQObYZgAAAQ5JREFUKM/szDEOwDAMAkCvjIz8Ooz+bVHTVMoPMgSLwWfJNTNSpGuFIk5nIEgFftBlWRwBhHJoiqTMtvLMWd84I+iHpQHuwD0XDoGnrLFHQRgIovArcpJtDFjOKpaBDFhYyoK94AHSjGDnDwmi95AtRbDYC1jkADa5i7Mbq+QtvPlmiv3MIOPDbhAQzZxbEznnEuK0vTi3mS/0kBBnuXr/WO699wn1cDQmX+71v4SgQcYWN8hYWyeLREtC3NpoaT9qSYh7V1cm775ijKJUaBrtvGmkmkQUTEXk+dY6TGMH2BBCuQoSXrQKh1CiZGZrmbhkGx+YSBdisto6wZwVGfeJEwwU4CIDRypYt3+ynn5CLZ6PPV32wQAAAABJRU5ErkJggg==";
+@imgTrees: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAD1BMVEV71DQAqyUAAACGotbuwEhHKnyqAAAA3UlEQVQoz32L0Y3EQAhDDRVgdAUA2QqSDk7bf03nSbTKKh8HjM08GRzHsR1fJbD7P2A/ATYtGlVtkAjUOdsD6LYcuoDv1yyBAsCcoJZjIoAK1AUC00B4RBlKTWTAbMBCjDIGhxJsNyCVCiyheyrnpTSSWmPEmUoJRYCWetZhdp7QqI8SiCAoTGZDVBJwF5+RkCWILLI5K5jrGGOM7HFLWhUDOT6c6fwZVSZ65lfLzKtz8jVgz3vYarL71SDz3defqQc+Cka1kR9HPAq2SvpxQDAMtwN24tsvejtEv/0PfiwmW7rDv+4AAAAASUVORK5CYII=";
+
+//размеры текста
+//lh = 1.231*fs - 0.28
+@fs48:	48px;
+@lh48:	59px;
+
+@fs40:	40px;
+@lh40:	49px;
+
+@fs32:	32px;
+@lh32:	39px;
+
+@fs24:	24px;
+@lh24:	29px;
+
+@fs20:	20px;
+@lh20:	24px;
+
+@fs16:	16px;
+@lh16:	20px;
+
+@fs14:	14px;
+@lh14:	17px;
+
+@fs12:	12px;
+@lh12:	14.5px;
+
+@fs10:	10px;
+@lh10:	12px;
+
+
+// Адаптив
+@xxxl_s:1920;
+@less_xxxl_s: @xxxl_s - 0.6;
+@xxl_s:1500;
+@less_xxl_s: @xxl_s - 0.6;
+@xl_s:1200;
+@less_xl_s: @xl_s - 0.6;
+@lg_s:992;
+@less_lg_s: @lg_s - 0.6;
+@md_s:850;
+@less_md_s: @md_s - 0.6;
+@sm_s:576;
+@less_sm_s: @sm_s - 0.6;
+@xs_s:375;
+@less_xs_s: @xs_s - 0.6;
+
+@moreXXXL	: ~"screen and (min-width: @{xxxl_s}px)";
+@lessXXXL	: ~"screen and (max-width: @{less_xxxl_s}px)";
+
+@moreXXL	: ~"screen and (min-width: @{xxl_s}px)";
+@xxl		: ~"screen and (min-width: @{xxl_s}px) and (max-width: @{less_xxxl_s}px)";
+@lessXXL	: ~"screen and (max-width: @{less_xxl_s}px)";
+
+@moreXL	: ~"screen and (min-width: @{xl_s}px)";
+@xl		: ~"screen and (min-width: @{xl_s}px) and (max-width: @{less_xxl_s}px)";
+@lessXL	: ~"screen and (max-width: @{less_xl_s}px)";
+
+@moreLG	: ~"screen and (min-width: @{lg_s}px)";
+@lg		: ~"screen and (min-width: @{lg_s}px) and (max-width: @{less_xl_s}px)";
+@lessLG	: ~"screen and (max-width: @{less_lg_s}px)";
+
+@moreMD	: ~"screen and (min-width: @{md_s}px)";
+@md		: ~"screen and (min-width: @{md_s}px) and (max-width: @{less_lg_s}px)";
+@lessMD	: ~"screen and (max-width: @{less_md_s}px)";
+
+@moreSM	: ~"screen and (min-width: @{sm_s}px)";
+@sm		: ~"screen and (min-width: @{sm_s}px) and (max-width: @{less_md_s}px)";
+@lessSM	: ~"screen and (max-width: @{less_sm_s}px)";
+
+@moreXS	: ~"screen and (min-width: @{xs_s}px)";
+@xs		: ~"screen and (min-width: @{xs_s}px) and (max-width: @{less_sm_s}px)";
+@lessXS	: ~"screen and (max-width: @{less_xs_s}px)";
